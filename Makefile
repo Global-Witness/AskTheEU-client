@@ -1,4 +1,4 @@
-.PHONY: setup install clean test test-login list-requests
+.PHONY: setup install clean test test-login test-draft list-requests
 
 # Main setup task - installs dependencies
 setup: install
@@ -10,6 +10,10 @@ install:
 # Test login functionality
 test-login:
 	python tests/test_login.py
+
+# Test draft request creation to Secretariat General
+test-draft:
+	python tests/test_draft_request.py
 
 # List FOI requests
 list-requests:
